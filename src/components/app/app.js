@@ -7,6 +7,7 @@ import Poster from "../poster/poster";
 import Page_1 from "../page_1/page_1";
 import Page_2 from "../page_2/page_2";
 import './app.scss';
+import Page_4 from "../page_4/page_4";
 
 class App extends Component {
     state = {
@@ -22,7 +23,7 @@ class App extends Component {
 
     render() {
         return (
-            <Page_2 data={this.state.data}/>
+            <Page_4 data={this.state.data}/>
         )
     }
 };

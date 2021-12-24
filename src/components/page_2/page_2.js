@@ -60,7 +60,7 @@ class Page_2 extends Component{
                 <Footer />           
             </div> 
         )
-    }
+    } 
 };
 
 export default Page_2;

@@ -5,7 +5,7 @@ import './aboutBeans.scss';
 
 import girlImg  from '../../assets/coffeImg.jpg';
 
-const AboutBeans = () => {
+const AboutBeans = ({title, text}) => {
 	return (
         <main className="aboutBeans" >
             <div className="aboutBeans__wrapper">
@@ -14,16 +14,10 @@ const AboutBeans = () => {
                 </div>   
                 
                 <div className="aboutBeans__info">
-                    <Heading type={"small"} text={"About our beans"} />
+                    <Heading type={"small"} text={title} />
                     <Logo color={"black"}/>
                     <div className="aboutBeans__descr">
-                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-
-                        Afraid at highly months do things on at. Situation recommend objection do intention
-                        so questions. 
-                        As greatly removed calling pleased improve an. Last ask him cold feel
-                        met spot shy want. Children me laughing we prospect answered followed. At it went
-                        is song that held help face.
+                        {text}
                     </div>
                 </div>   
 
