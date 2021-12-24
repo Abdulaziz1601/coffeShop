@@ -8,9 +8,9 @@ import './poster.scss';
 
 const Poster = () => {
 	return ( 
-		<div className='content'>
-            <Navbar/>
-            <Heading/>
+		<section className='content'>
+            <Navbar color="white"/>
+            <Heading text="Everything You Love About Coffee"/>
             <Logo color={"white"} />
             <div className='info'>
                 We makes every day full of energy and taste
@@ -19,8 +19,8 @@ const Poster = () => {
                 Want to try our beans?
             </div>
             <Button type={"big"}/>
-        </div> 
-	)
+        </section> 
+	) 
 };
 
 export default Poster;

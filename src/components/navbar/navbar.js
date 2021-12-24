@@ -1,8 +1,9 @@
 import './navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({color}) => {
+    const navbarColor = color === "white" ? "navbar_white" : "navbar_black";
 	return ( 
-        <div className='container'>
+        <div className={`navbar ${navbarColor}`}>
             <ul>
                 <li><a href="default.asp">Coffee house</a></li>
                 <li><a href="news.asp">Our coffee</a></li>
