@@ -6,8 +6,9 @@ import Footer from "../footer/footer";
 import Poster from "../poster/poster";
 import Page_1 from "../page_1/page_1";
 import Page_2 from "../page_2/page_2";
-import './app.scss';
+import Page_3 from "../page_3/page_3";
 import Page_4 from "../page_4/page_4";
+import './app.scss';
 
 class App extends Component {
     state = {

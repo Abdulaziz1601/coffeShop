@@ -20,6 +20,13 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: #000000;
+		&_left {
+			text-align: left;
+		}
+		&__info,
+		&__place {
+			margin-top: 16px;
+		}
 	}
 
 	&__img {
