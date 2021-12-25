@@ -60,9 +60,6 @@ class CardFilter extends Component {
 					<div className='cardFilter__filter'>
 						<span>Or filter</span>
 						<div className='cardFilter__btn-wrapper'>
-							{/* <button className='cardFilter__btn cardFilter__btn_active'>Brazil</button>
-							<button className='cardFilter__btn'>Kenya</button>
-							<button className='cardFilter__btn'>Columbia</button> */}
 							{buttons}
 						</div>
 					</div>

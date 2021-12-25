@@ -49,11 +49,14 @@ class Page_2 extends Component{
         const {data} = this.props;
         const searchedData = this.searchCard(data, term);
         const visibleData = this.filterCards(searchedData, filter);
+        const txt = <>
+                        Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. <div className="aboutBeans__descr__info" >Afraid at highly months do things on at. Situation recommend objection do intention so questions.</div> <br/> As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went  is song that held help face.
+                    </>
         return (
             <div>   
                 <Header heading={"Our Coffee"} />
                 <AboutBeans title={"About our beans"}
-                            text={"Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went  is song that held help face."} 
+                            text={txt} 
                             imgNum={1}/>
                 <CardFilter data={visibleData}
                             onUpdateSearch={this.onUpdateSearch}

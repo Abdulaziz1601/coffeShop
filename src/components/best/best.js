@@ -5,10 +5,8 @@ import './best.scss';
 const Best = () => {
 	return (
         <section className='best'>
-            <div className='best__wrapper'>
-                <Heading type="small" text={"Our best"} />
-                <Card/>
-            </div>
+            <Heading type="small" text={"Our best"} />
+            <Card/>
         </section> 
 	)
 };

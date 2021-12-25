@@ -1,14 +1,12 @@
 
 import './button.scss';
 
-const Button = ({type}) => {
-    if(type === 'big') {
+const Button = () => {
         return ( 
-            <button className='btn_big'>
+            <button className='btn'>
                 More
             </button> 
         )
-    }
 };
 
 export default Button;

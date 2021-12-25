@@ -8,17 +8,17 @@ import './poster.scss';
 
 const Poster = () => {
 	return ( 
-		<section className='content'>
+		<section className='poster'>
             <Navbar color="white"/>
             <Heading text="Everything You Love About Coffee"/>
             <Logo color={"white"} />
-            <div className='info'>
-                We makes every day full of energy and taste
+            <div className='poster__info'>
+                We make every day full of energy and taste
             </div>
-            <div className='info'>
+            <div className='poster__info'>
                 Want to try our beans?
             </div>
-            <Button type={"big"}/>
+            <Button />
         </section> 
 	) 
 };

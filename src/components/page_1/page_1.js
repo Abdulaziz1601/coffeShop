@@ -7,7 +7,7 @@ import './page_1.scss';
 const Page_1 = () => {
 	return (
         <>
-            <Poster/>
+            <Poster/> 
             <Aboutus/>
             <Best/> 
             <Footer/>
