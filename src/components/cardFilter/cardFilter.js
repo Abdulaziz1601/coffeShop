@@ -45,34 +45,35 @@ class CardFilter extends Component {
 					</button>
 		})
 		return (
-
-			<section className='cardFilter'>
-				{/* <hr className='card__line'/> */}
-			<div className='cardFilter__wrapper'>
-				<form className='cardFilter__form'>
-					<span>Lookiing for</span>
-					<input 
-						className='cardFilter__input'
-						type="text"
-						placeholder='start typing here...'  
-						onChange={this.onUpdateSearch}/>
-				</form>
-				<div className='cardFilter__filter'>
-					<span>Or filter</span>
-					<div className='cardFilter__btn-wrapper'>
-						{/* <button className='cardFilter__btn cardFilter__btn_active'>Brazil</button>
-						<button className='cardFilter__btn'>Kenya</button>
-						<button className='cardFilter__btn'>Columbia</button> */}
-						{buttons}
+			<>
+				<hr className='line'/>
+				<section className='cardFilter'>
+				<div className='cardFilter__wrapper'>
+					<form className='cardFilter__form'>
+						<span>Lookiing for</span>
+						<input 
+							className='cardFilter__input'
+							type="text"
+							placeholder='start typing here...'  
+							onChange={this.onUpdateSearch}/>
+					</form>
+					<div className='cardFilter__filter'>
+						<span>Or filter</span>
+						<div className='cardFilter__btn-wrapper'>
+							{/* <button className='cardFilter__btn cardFilter__btn_active'>Brazil</button>
+							<button className='cardFilter__btn'>Kenya</button>
+							<button className='cardFilter__btn'>Columbia</button> */}
+							{buttons}
+						</div>
 					</div>
 				</div>
-			</div>
-	
-			<div className='cardFilter__card-wrapper'>
-				{cards}
-			</div>
-	
-			</section> 
+		
+				<div className='cardFilter__card-wrapper'>
+					{cards}
+				</div>
+		
+				</section>
+			</> 
 		)
 	}
 };

@@ -25,6 +25,7 @@
         align-items: center;
         justify-content: space-between;
     }
+    
 
     &__btn-wrapper {
         display: inline-block;
@@ -58,6 +59,9 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        &_min {
+            margin-top: 0;
+        }
     }
     
 }
