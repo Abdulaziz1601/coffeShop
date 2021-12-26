@@ -1,4 +1,3 @@
-import Button from '../button/button';
 import Heading from '../heading/heading';
 import Logo from '../logo/logo';
 import Navbar from '../navbar/navbar';
@@ -18,7 +17,9 @@ const Poster = () => {
             <div className='poster__info'>
                 Want to try our beans?
             </div>
-            <Button />
+            <button className='btn'>
+                More
+            </button> 
         </section> 
 	) 
 };

@@ -1,25 +1,15 @@
-import { Component } from "react/cjs/react.production.min";
+import { Component } from "react";
 import AboutBeans from "../aboutBeans/aboutBeans";
-import Aboutus from "../aboutus/aboutus";
-import Best from "../best/best";
 import CardFilter from "../cardFilter/cardFilter";
-import CardItem from "../cardItem/cardItem";
 import Footer from "../footer/footer";
 import Header from "../header/header";
-import Poster from "../poster/poster";
 import './page_2.scss';
 
 class Page_2 extends Component{
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            term: '',
-            filter: 'Brazil'
-        }
+    state = {
+        term: '',
+        filter: 'Brazil'
     }
-
-    
 
     onUpdateSearch = (term) => {
         this.setState({term});
@@ -51,13 +41,17 @@ class Page_2 extends Component{
         const visibleData = this.filterCards(searchedData, filter);
         const txt = <>
                         Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. <div className="aboutBeans__descr__info" >Afraid at highly months do things on at. Situation recommend objection do intention so questions.</div> <br/> As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went  is song that held help face.
-                    </>
+                    </>;
+
+
+
         return (
             <div>   
                 <Header heading={"Our Coffee"} />
                 <AboutBeans title={"About our beans"}
                             text={txt} 
                             imgNum={1}/>
+                            
                 <CardFilter data={visibleData}
                             onUpdateSearch={this.onUpdateSearch}
                             onButtonsFilter={this.onButtonsFilter}

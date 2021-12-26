@@ -1,4 +1,4 @@
-import Card from '../card/card';
+import Card from './card';
 import Heading from '../heading/heading'
 import './best.scss';
 

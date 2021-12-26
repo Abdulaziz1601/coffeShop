@@ -5,9 +5,9 @@ const Navbar = ({color}) => {
 	return ( 
         <div className={`navbar ${navbarColor}`}>
             <ul>
-                <li><a href="default.asp">Coffee house</a></li>
-                <li><a href="news.asp">Our coffee</a></li>
-                <li><a href="contact.asp">For your pleasure</a></li>
+                <li><a href="#">Coffee house</a></li>
+                <li><a href="#">Our coffee</a></li>
+                <li><a href="#">For your pleasure</a></li>
             </ul>
         </div>
 	)

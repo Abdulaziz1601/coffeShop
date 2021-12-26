@@ -1,6 +1,7 @@
+import { Component } from 'react';
 
-import { Component } from 'react/cjs/react.production.min';
-import CardItem from '../cardItem/cardItem';
+import Card from '../card/card';
+
 import './cardFilter.scss';
 
 
@@ -16,13 +17,11 @@ class CardFilter extends Component {
 			{place: 'Brazil'},
 			{place: 'Kenya'},
 			{place: 'Columbia'},
-		]
-
+		];
 	}
 
 	onUpdateSearch = (e) => {
 		const term = e.target.value;
-		console.log(term);
 		this.setState({
 			term
 		});
@@ -32,8 +31,9 @@ class CardFilter extends Component {
 	render() {
 		const {data} = this.props;
 		const cards = data.map((item, i) => (
-			<CardItem key={i} {...item} />
+			<Card key={i} {...item} />
 		));
+		
 		const buttons = this.buttons.map(({place}) => {
 			const active = this.props.filter === place;
 			const clazz = active ? 'cardFilter__btn_active': null;
@@ -48,27 +48,27 @@ class CardFilter extends Component {
 			<>
 				<hr className='line'/>
 				<section className='cardFilter'>
-				<div className='cardFilter__wrapper'>
-					<form className='cardFilter__form'>
-						<span>Lookiing for</span>
-						<input 
-							className='cardFilter__input'
-							type="text"
-							placeholder='start typing here...'  
-							onChange={this.onUpdateSearch}/>
-					</form>
-					<div className='cardFilter__filter'>
-						<span>Or filter</span>
-						<div className='cardFilter__btn-wrapper'>
-							{buttons}
+					<div className='cardFilter__wrapper'>
+						<form className='cardFilter__form'>
+							<span>Lookiing for</span>
+							<input 
+								className='cardFilter__input'
+								type="text"
+								placeholder='start typing here...'  
+								onChange={this.onUpdateSearch}/>
+						</form>
+						<div className='cardFilter__filter'>
+							<span>Or filter</span>
+							<div className='cardFilter__btn-wrapper'>
+								{buttons}
+							</div>
 						</div>
 					</div>
-				</div>
-		
-				<div className='cardFilter__card-wrapper'>
-					{cards}
-				</div>
-		
+			
+					<div className='cardFilter__card-wrapper'>
+						{cards}
+					</div>
+			
 				</section>
 			</> 
 		)

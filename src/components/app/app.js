@@ -1,9 +1,5 @@
 import { Component } from "react";
 
-import Aboutus from "../aboutus/aboutus";
-import Best from "../best/best";
-import Footer from "../footer/footer";
-import Poster from "../poster/poster";
 import Page_1 from "../page_1/page_1";
 import Page_2 from "../page_2/page_2";
 import Page_3 from "../page_3/page_3";
@@ -24,7 +20,7 @@ class App extends Component {
 
     render() {
         return (
-            <Page_4 data={this.state.data}/>
+            <Page_1 data={this.state.data}/>
         )
     }
 };
