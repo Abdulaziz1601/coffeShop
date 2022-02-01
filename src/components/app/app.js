@@ -1,9 +1,8 @@
 import { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from "../header/header";
+import {About, AboutMini, AboutFilter, AllProducts} from '../pages'
 
-import Page_1 from "../page_1/page_1";
-import Page_2 from "../page_2/page_2";
-import Page_3 from "../page_3/page_3";
-import Page_4 from "../page_4/page_4";
 import './app.scss';
 
 class App extends Component {
@@ -20,7 +19,28 @@ class App extends Component {
 
     render() {
         return (
-            <Page_1 data={this.state.data}/>
+            <Router>
+                <div className="app">
+                <Header heading={"Our Coffee"} />
+                <main>
+                    <Switch>
+                        {/* Compares the exact routes */}
+                        <Route exact path="/">
+                           <About data={this.state.data} />
+                        </Route>
+                        <Route exact path="/aboutFilter">
+                           <AboutFilter data={this.state.data} />
+                        </Route>
+                        <Route exact path="/aboutMini">
+                            <AboutMini data={this.state.data} />
+                        </Route>
+                        <Route exact path="/allProducts">
+                            <AllProducts data={this.state.data} />
+                        </Route>
+                    </Switch>
+                </main>
+            </div>
+            </Router>
         )
     }
 };

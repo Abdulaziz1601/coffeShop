@@ -1,3 +1,4 @@
+import {Link, NavLink} from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = ({color}) => {
@@ -5,9 +6,9 @@ const Navbar = ({color}) => {
 	return ( 
         <div className={`navbar ${navbarColor}`}>
             <ul>
-                <li><a href="#">Coffee house</a></li>
-                <li><a href="#">Our coffee</a></li>
-                <li><a href="#">For your pleasure</a></li>
+                <li><NavLink className='navbar__link' exact activeStyle={{'text-decoration':'underline'}} to="/aboutFilter" >Coffee house</NavLink></li>
+                <li><NavLink className='navbar__link' exact activeStyle={{'text-decoration':'underline'}} to="/aboutMini" >Our coffee</NavLink></li>
+                <li><NavLink className='navbar__link' exact activeStyle={{'text-decoration':'underline'}} to="/allProducts" >For your pleasure</NavLink></li>
             </ul>
         </div>
 	)

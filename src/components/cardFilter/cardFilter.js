@@ -1,78 +1,71 @@
-import { Component } from 'react';
-
+import { useState } from 'react';
 import Card from '../card/card';
 
 import './cardFilter.scss';
 
+const CardFilter = (props) => {
+	const [term, setTerm] = useState('');
 
-class CardFilter extends Component {
-	constructor(props) {
-		super(props);
+	const buttons = [
+		{place: 'Brazil'},
+		{place: 'Kenya'},
+		{place: 'Columbia'},
+	];
 
-		this.state = {
-			term: ''
-		};
-
-		this.buttons = [
-			{place: 'Brazil'},
-			{place: 'Kenya'},
-			{place: 'Columbia'},
-		];
+	const onUpdateSearch = (e) => {
+		setTerm(e.target.value);
+		props.onUpdateSearch(term);
 	}
 
-	onUpdateSearch = (e) => {
-		const term = e.target.value;
-		this.setState({
-			term
-		});
-		this.props.onUpdateSearch(term);
-	}
+	const cards = props.data.map((item, i) => (
+		<Card key={i} {...item} />
+	));
 	
-	render() {
-		const {data} = this.props;
-		const cards = data.map((item, i) => (
-			<Card key={i} {...item} />
-		));
-		
-		const buttons = this.buttons.map(({place}) => {
-			const active = this.props.filter === place;
+	const renderBtns = () => {
+		const items = buttons.map(({place}) => {
+			const active = props.filter === place;
 			const clazz = active ? 'cardFilter__btn_active': null;
-			return <button type='button' 
+			
+			return (
+				<button type='button' 
 						className={`cardFilter__btn ${clazz}`}
 						key={place} 
-						onClick={() => this.props.onButtonsFilter(place)}>
+						onClick={() => props.onButtonsFilter(place)}>
 						{place}
-					</button>
+				</button>
+			);
 		})
-		return (
-			<>
-				<hr className='line'/>
-				<section className='cardFilter'>
-					<div className='cardFilter__wrapper'>
-						<form className='cardFilter__form'>
-							<span>Lookiing for</span>
-							<input 
-								className='cardFilter__input'
-								type="text"
-								placeholder='start typing here...'  
-								onChange={this.onUpdateSearch}/>
-						</form>
-						<div className='cardFilter__filter'>
-							<span>Or filter</span>
-							<div className='cardFilter__btn-wrapper'>
-								{buttons}
-							</div>
+		return items;
+	}
+	
+	return (
+		<>
+			<hr className='line'/>
+			<section className='cardFilter'>
+				<div className='cardFilter__wrapper'>
+					<form className='cardFilter__form'>
+						<span>Lookiing for</span>
+						<input 
+							className='cardFilter__input'
+							type="text"
+							placeholder='start typing here...'  
+							onChange={onUpdateSearch}/>
+					</form>
+					<div className='cardFilter__filter'>
+						<span>Or filter</span>
+						<div className='cardFilter__btn-wrapper'>
+							{renderBtns()}
 						</div>
 					</div>
-			
-					<div className='cardFilter__card-wrapper'>
-						{cards}
-					</div>
-			
-				</section>
-			</> 
-		)
-	}
+				</div>
+		
+				<div className='cardFilter__card-wrapper'>
+					{cards}
+				</div>
+		
+			</section>
+		</> 
+	)
 };
 
 export default CardFilter;

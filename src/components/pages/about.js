@@ -5,10 +5,10 @@ import Footer from "../footer/footer";
 import Poster from "../poster/poster";
 import './page_1.scss';
 
-const Page_1 = () => {
+const About = () => {
 	return (
         <>
-            <Poster/> 
+            {/* <Poster/>  */}
             <main className="aboutus" >
                 <Heading type="small" text="About Us"/>
                 <Logo color={"black"} />
@@ -33,4 +33,4 @@ const Page_1 = () => {
 	)
 };
 
-export default Page_1;
+export default About;

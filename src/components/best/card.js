@@ -1,10 +1,8 @@
-
 import './card.scss';
 
 import card_1 from '../../assets/card_1.png';
 import card_2 from '../../assets/card_2.png';
 import card_3 from '../../assets/card_3.png';
-
 
 const Card = () => {
 	return (

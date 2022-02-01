@@ -1,6 +1,4 @@
 import card_1 from '../../assets/card_1.png';
-import card_2 from '../../assets/card_2.png';
-import card_3 from '../../assets/card_3.png';
 
 import './card.scss';
 
@@ -20,7 +18,6 @@ const Card = ({name, place, price}) => {
                     <div className='card__price'>
                         {price}
                     </div>
-                    
                 </div>
         </div> 
 	)
